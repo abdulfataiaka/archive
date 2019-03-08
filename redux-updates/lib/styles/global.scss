@@ -1,0 +1,50 @@
+// Declare variable below
+
+$colspace: 2%;
+$rowpad: 25px;
+$rowheight: 42px;
+$paleblue:#f2f8fc;
+$palered: #CE7784;
+$palegreen: #4FB766;
+
+// Declare mixins below
+
+@mixin clearfix {
+  display: block;
+  content: "";
+  clear: both;  
+}
+
+// Declare functions below
+
+@function set-col-width($value) {
+  @return $value - $colspace;
+}
+
+
+// Declare global styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #update-app, #redux-updates {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#redux-updates {
+  background: #eee;
+
+  .ru-align {
+    display: block;
+    margin: 0 auto;
+    width: 88%;
+  }
+}

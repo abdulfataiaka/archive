@@ -1,0 +1,78 @@
+.ru-table {
+  display: block;
+  background: white;
+  margin: 0 auto;
+  border-radius: 1px;
+
+  .ru-row, .ru-header {
+    display: block;
+    min-height: $rowheight;
+    max-height: $rowheight;
+    padding: 0 $rowpad;
+    width: calc(100% - ($rowpad * 2));
+    overflow: hidden;
+    border-bottom: 1px solid #F1F1F1;
+
+    &:after {
+      @include clearfix();
+    }
+  }
+  
+  .ru-col {
+    float: left;
+    margin-right: 1%;
+    overflow: hidden;
+
+    .tag {
+      display: inline-block;
+      background: #F1F1F1;
+      padding: 5px 10px;
+      font-size: 11px;
+      border-radius: 3px;
+
+      &.success, &.danger {
+        color: white;
+      }
+
+      &.danger {
+        background: $palered;
+      }
+  
+      &.success {
+        background: $palegreen;        
+      }
+    }
+  }
+
+  .ru-row {
+    &.withbg {
+      background: $paleblue
+    }
+
+    .text {
+      display: inline-block;
+      margin-top: 13px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .ru-header {
+    background: #f2f8fc;
+
+    .ru-col {
+      padding-top: 13px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &.v1 {
+      .ru-col {
+        &:nth-child(1), 
+        &:nth-child(2) {
+          width: set-col-width(20%);
+        } 
+      }
+    }
+  }
+}

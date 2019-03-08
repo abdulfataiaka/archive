@@ -1,0 +1,68 @@
+@mixin v1-table-widths {
+  .ru-col {
+    &:nth-child(1) {
+      width: set-col-width(18%);
+    }
+
+    &:nth-child(2) {
+      width: set-col-width(30%);
+    } 
+
+    &:nth-child(3) {
+      width: set-col-width(52%);
+    }
+  }
+}
+
+.ru-table {
+  .ru-header {
+    &.v1 {
+      @include v1-table-widths();
+    }
+  }
+
+  .ru-row {
+    &.v1 {
+      @include v1-table-widths();
+
+      .ru-col {
+        &:nth-child(1) {
+          span {
+            display: inline-block;
+            margin-top: 13px;
+          }
+        }
+        
+        &:nth-child(2) {
+          margin-top: 10px;
+        }
+
+        &:nth-child(3) {
+          &:after{
+            @include clearfix();
+          }
+
+          span {
+            float: left;
+            margin-top: 9px;
+
+            &:nth-child(2) {
+              margin: 12px 20px 0;
+              color: $palered;
+              font-weight: 300;
+            }
+
+            &.tag {
+              $pad: 15px;
+              padding-left: $pad;
+              padding-right: $pad;
+              text-align: center;
+              min-width: 25px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

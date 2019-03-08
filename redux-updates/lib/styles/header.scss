@@ -1,0 +1,29 @@
+#redux-updates {
+  #header {
+    display: block;
+    width: 100%;
+    background: white;
+    box-shadow: 1px 1px 5px #dadcdf;
+    height: 55px;
+    overflow: hidden;
+    
+    .ru-align {
+      @include clearfix();
+
+      .page-icon {
+        float: left;
+        font-size: 28px;
+        color: #767676;
+        margin-top: 14px;
+      }
+
+      .page-name {
+        float: left;
+        font-size: 20px;
+        font-weight: 400;
+        color: #767676;
+        margin: 16px 0 0 8px;
+      }
+    }
+  }
+}

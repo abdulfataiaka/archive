@@ -1,0 +1,13 @@
+#redux-updates {
+  #content {
+    display: block;
+    width: 100%;
+    height: calc(100% - 55px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    #home-table {
+      margin: 30px auto;
+    }
+  }
+}
