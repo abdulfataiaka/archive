@@ -1,0 +1,214 @@
+#dashboard {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#sidebar {
+  display: block;
+  width:20% !important;
+  min-height: 100%;
+  max-height: 100%;
+  background: #ff1494;
+  overflow: hidden;
+}
+
+#content {
+  display: block;
+  width:79.5% !important;
+  padding: 30px 2%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.user-image {
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+}
+
+.user-name {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 10px auto 0;
+  font-weight: 600;
+}
+
+.sidebar-item {
+  display: block;
+  width:85%;
+  margin: 0 auto;
+}
+.sidebar-title {
+  display: block;
+  text-transform: uppercase;
+  color: #F1F1F1;
+  font-size: 11px;
+  margin: 0 auto 5px;
+  font-weight: 600;
+}
+
+.sidebar-value {
+  display: block;
+  color: white;
+  font-size: 18px;
+  word-wrap: break-all;
+  word-break: break-all;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.address-copy {
+  display: inline-block;
+  padding: 3px 15px;
+  font-size: 10px;
+  background: red;
+  cursor: pointer;
+  color: white;
+  border-radius: 20px;
+}
+
+.buy-eth {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 85%;
+  border: 1px solid transparent;
+  background: #5c58ca;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background 0.2s;
+  margin: 40px auto 0;
+}
+
+.buy-eth:hover {
+  background: white;
+  border-color: #5c58ca;
+  color: #5c58ca;
+}
+
+.girl-card {
+  display: block;
+  border: 1px solid #F1F1F1;
+  padding: 20px 15px;
+  border-radius: 3px;
+  background: #F6F6F6;
+  min-height: 100px;
+}
+
+.girl-image {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.girl-name {
+  font-weight: 600;
+}
+
+.girl-inst span{
+  font-weight: 600;
+}
+
+.view-girl {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 10px;
+  background: #5c58ca;
+  border: none;
+  cursor: pointer;
+  margin-top: -4px;
+  color: white;
+  border-radius: 20px;
+}
+
+.girl-card-2 {
+  display: block;
+  border: 1px solid #F1F1F1;
+  padding: 20px 15px;
+  border-radius: 3px;
+  width: 80%;
+  margin:0;
+  background: #F6F6F6;
+  min-height: 100px;
+}
+
+.girl-card-2 img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.girl-card-2 span {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+
+.girl-card-2 button {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 85%;
+  border: 1px solid transparent;
+  background: #5c58ca;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background 0.2s;
+  margin: 0px auto 0;
+}
+
+.girl-card-2 button:hover {
+  background: white;
+  border-color: #5c58ca;
+  color: #5c58ca;
+}
+
+.card {
+  display: block;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+}
+
+.card div {
+  display: block;
+  width: 90%;
+  font-size: 13px;
+  margin: 20px auto; 
+}
+
+.card button {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  background: #ff1494;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  transition: background 0.2s;
+  margin: 0px 0 20px 15px;
+}
+
+.card button:hover {
+  background: red;
+}
