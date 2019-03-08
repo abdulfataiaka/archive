@@ -1,0 +1,139 @@
+/***************************************   
+            Header
+****************************************/
+
+header{
+    display:block;
+    width:100%;
+    position:fixed;
+    min-height:70px;
+    max-height:70px;
+    overflow:hidden;
+    background:white;
+    z-index:50;
+    border-bottom:1px solid #E8E8E8;
+}
+#header-spacer{
+    display:block;
+    min-height:46px;
+    max-height:46px;
+    background:transparent;
+}
+#header-logo{
+	display:inline-block;
+    margin-top:14px;
+}
+#header-logo img{
+    display:inline-block;
+    width:40px;
+    margin:0px 10px 0 0;
+}
+#header-logo div .top{
+    font-size:14px;
+    font-weight:600
+}
+#header-logo div .base{
+    font-size:12px;
+    font-weight:400;
+    color:black;
+}
+
+.header-links{
+    display:inline-block;
+    border:none;
+    background:none;
+    font-size:16px;
+    color:#999;
+    cursor:pointer;
+    transition: all .2s ease-in-out;
+    font-weight:600;
+    margin:23px 18px 0 0;
+}
+.header-links:hover{
+    color:black;
+}
+.header-heart{
+    display:inline-block;
+    margin:24px 0 0 5px;
+}
+.header-heart i{
+    color:#f15050;
+    font-size:23px;
+}
+.header-heart span{
+    width:30px;
+    height:28px;
+    overflow:hidden;
+    margin:-3px 0 0 4px;
+    border-radius:10px;
+    background:white;
+    color:black;
+    font-weight:600;
+    padding:4px 0 0;
+    border:1px solid gray;
+    font-size:12px;
+    text-align:center;
+}
+.header-avatar{
+    display:inline-block;
+    width:30px;
+    border-radius:50%;
+    margin:21px 15px 0 15px;
+}
+.header-green-button{
+    display:inline-block;
+    margin:20px 0 0 5px;
+    font-weight:600;
+    background:#3cb46e;
+    height:32px;
+    border-radius:5px;
+    transition: all .2s ease-in-out;
+    font-size:14px;
+    padding:0 11px;
+    color:white;
+    border:none;
+}
+.header-green-button:hover{
+    background:green;
+}
+.header-icon,.header-icon-B{
+    display:inline-block;
+    font-size:30px;
+    color:gray;
+    margin:10px 35px 0 0;
+}
+.header-icon-B{
+    font-size:25px;
+    margin-top:14px;
+}
+/***************************************   
+        SM Nav
+****************************************/
+
+#header-navbut{
+    display:block;
+    font-size:30px;
+    margin:13px auto 0;
+}
+#sm-nav{
+    position:fixed;
+    z-index:50;
+    width:100%;
+    top:70px;
+    background:black;
+    opacity:0.9;
+}
+.sm-nav-links{
+    display:block;
+    padding:15px 0;
+    border-bottom:1px solid gray;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:13px;
+    color:white;
+    font-weight:600;
+    transition: background 0.2s;
+}
+.sm-nav-links:hover{
+    background: #454545;
+}

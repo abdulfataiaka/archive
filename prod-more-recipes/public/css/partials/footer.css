@@ -1,0 +1,51 @@
+/***************************************   
+            Footer
+****************************************/
+
+footer{
+    display:block;
+}
+footer #top-section{
+    display:block;
+    padding:80px 0;
+    background: #272727;
+}
+footer #top-section div{
+    display:block;
+    width:90%;
+    margin:0 auto;
+}
+#footer-socials{
+    display:block;
+    text-align:center;
+}
+.footer-social{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:1px solid white;
+    margin:0 10px;
+    color:white;
+    font-size:25px;
+    overflow: hidden;
+    text-align:center;
+    padding-top:6px;
+}
+#footer-base-text-1{
+    width:90%;
+    text-align:center;
+    color:white;
+    font-size:12px;
+    margin:45px auto 15px;
+    text-transform:uppercase;
+    line-height: 180%;
+}
+#footer-base-text-2{
+    width:90%;
+    text-align:center;
+    color:gray;
+    font-size:11px;
+    margin:0 auto;
+    text-transform:uppercase;
+}

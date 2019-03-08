@@ -1,0 +1,50 @@
+#reviews-heading{
+    display:inline-block;
+    width:18%;
+    font-size:20px;
+    color:#777
+}
+#reviews-line{
+    display:inline-block;width:82%;min-height:1px;margin-top:15px;max-height:1px;overflow:hidden;background:#ddd;
+}
+#review-post-div{
+    display:block;width:95%;margin:20px auto;
+}
+#review-post-field-div{
+    display:block;padding-bottom:20px;border-bottom:1px solid #e8e8e8;
+}
+#poster-image{
+    display:inline-block;max-width:17%;width:45px;height:45px;border-radius:50%;
+}
+#post-textarea{
+    display:inline-block;font-weight:100;font-size:17px;resize:none;margin:0 0 0 3%;border:none;outline:none;min-width:80%;max-width:80%;height:60px;
+}
+#post-button{
+    padding:7px 15px;
+    border-radius:2px;
+    font-size:14px;
+}
+#post-error{
+    display:inline-block;
+    max-width:70%;
+    margin-left:4%;
+    padding: 7px 15px;
+    border:1px solid #FF9481;
+    border-radius:2px;
+    background:none;
+    overflow:hidden;
+    font-size:13px;
+    font-weight:200;
+    color:red;
+}
+.recipe-review{
+    display:block;
+    padding:20px 0 0;
+}
+.recipe-review .aligner{
+    display:block;width:95%;margin:0 auto;
+}
+.reviewer-image{display:inline-block;width:30px;height:30px;border-radius:50%;}
+.reviewer-username{display:inline-block;margin:4px 0 0 10px;font-size:14px;font-weight:600;color:#777;}
+.review-date{display:inline-block;margin:4px 0 0 10px;font-size:14px;font-weight:600;color:#777;}
+.review-body{display:block;margin:10px auto 0;font-weight:100;font-size:15px;padding-bottom:20px;border-bottom:1px solid #E8E8E8;}

@@ -1,0 +1,45 @@
+.confirm-check-button{
+    display:inline-block;
+    background:none;
+    border:none;
+    color:green;
+    font-size:22px;
+}
+.confirm-times-button{
+    display:inline-block;
+    background:none;
+    border:none;
+    color:red;
+    font-size:22px;
+}
+.recipe-modal-error{
+    display:block;
+    border:1px solid lightgray;
+    background:#F3F3F3;
+    padding:11px 8px;
+    font-size:14px;
+    border-radius:3px;
+    font-weight:200px;
+}
+.recipe-modal-xbut{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:none;
+    margin-top:-9px;
+    border:1px solid lightgray;
+    color:gray;
+}
+.recipe-deleting{
+    margin:5px 10px 4px 0;
+}
+.recipe-deleting i{
+    display: inline-block;
+    margin-right:7px;
+    font-size:14px;
+}
+.recipe-deleting span{
+    display: inline-block;
+    font-size:14px;
+}

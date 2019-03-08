@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# All scripts need to have access to { app directory } and { script directory }
+# These will be used to manage app and locate bash scripts for imports
+
+# ! The present working directory cannot be assumed to be the app directory
+# because the access we always need is for the root of the application.
+
+# @ The value from { $0 } can be used to get the rootpath of the tool itself,
+# as be can use the substringn expansion to achieve this. 
+
+# @ Root path for the cobrax library is the { basedir }
+
+# @ declare global variables below
+basedir="${0:0:$(( ${#0} - 7 ))}"
+
+# @ import library global scripts below
+source "${basedir}/utils/index.sh"
+
+# @ import library main entry script
+source "${basedir}/lib/index.sh"

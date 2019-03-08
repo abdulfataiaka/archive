@@ -1,0 +1,46 @@
+#category-div{
+    display:block;
+    width:98%;
+    border:1px solid #E8E8E8;
+    background:white;
+    margin:0 auto 12px;
+    padding:20px 0;
+    border-radius: 4px;
+}
+
+#category-div .align{
+    display:block;
+    width:90%;
+    margin:0 auto 0;
+}
+
+#category-div h5{
+    font-size:13px;
+    font-weight:600;
+    margin:10px 0 30px;
+}
+#categories{
+    display:block;
+    margin: 30px auto 0;
+}
+.category{
+    display:block;
+    border-radius:3px;
+    padding:8px 10px;
+    margin:0 auto 10px;
+    background: #F5F5F5;
+}
+.category-text{
+    padding-top:0;
+    font-size:16px;
+    font-weight:200;
+}
+.no-catgories{
+    display:block;
+    margin:10px auto 0;
+    font-size:15px;
+    font-weight:200;
+    line-height: 150%;
+}
+.category-button{
+}

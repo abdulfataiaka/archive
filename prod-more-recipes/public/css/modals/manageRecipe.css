@@ -1,0 +1,99 @@
+.recipe-label{
+    display:block;
+    margin:0 auto 10px;
+    font-size:18px;
+    color:gray;
+    font-weight:600;
+}
+.recipe-title-field{
+    display:block;
+    width:100%;
+    font-size:20px;
+    font-weight:200;
+    border:none;
+    border-bottom:1px solid lightgray;
+    padding-bottom:10px;
+}
+.recipe-procedure-field{
+    display:block;
+    width:100%;
+    font-size:17px;
+    font-weight:200;
+    resize: none;
+    border:none;
+    height:250px;
+    border-bottom:1px solid lightgray;
+    padding-bottom:10px;
+}
+.recipe-main-button{
+    display:block;
+    margin:30px 0 0;
+    padding:10px 15px;
+    font-size:13px;
+    border-radius:2px;
+}
+.recipe-dummy-image-but{
+    display: block;
+    width:100%;
+}
+.recipe-preview-image{
+    display:block;
+    border-radius:2px;
+    min-height:200px;
+    max-height:200px;
+    overflow:hidden;
+    width:100%;
+}
+.recipe-dummy-image{
+    display:block;
+    background:#E8E8E8;
+    border-radius:2px;
+    min-height:200px;
+    max-height:200px;
+    overflow:hidden;
+    width:100%;
+    text-align:center;
+}
+.recipe-dummy-image i{
+    display:inline-block;
+    margin:0 auto;
+    font-size:50px;
+    color:gray;
+    margin-top:60px;
+}
+.recipe-dummy-image div{
+    display:block;
+    text-align:center;
+    font-size:12px;
+    font-weight:600;
+    margin:15px auto 0;
+}
+.recipe-ingredient-field{
+    display:inline-block;
+    border:1px solid lightgray;
+    border-radius:2px;
+    padding:5px 8px;
+    font-weight:200;
+    font-size:14px;
+    min-width:82%;
+    max-width:82%;
+}
+.recipe-ingredient-button{
+    display:inline-block;
+    padding:6px 0 5px;
+    width:35px;
+    max-width:12%;
+    margin-left:3%;
+    font-size:14px;
+    border-radius:2px;
+}
+.recipe-ingredient-tag{
+    display:inline-block;
+    padding:7px 9px;
+    min-width: 90px;
+    font-size:12px;
+    border-radius:2px;
+    background:#E8E8E8;
+    color:black;
+    margin:0 9px 10px 0;
+}

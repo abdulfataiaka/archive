@@ -1,0 +1,217 @@
+*{
+    margin:0;
+    padding:0;
+    outline:none !important;
+}
+body{
+    display:block;
+    background:white;
+    position:relative;
+    width:100%;
+    overflow-x:hidden;
+}
+section{ 
+    display:block; 
+}
+.page-align{
+    display:block;
+    width:90%;
+    margin:0 auto;
+}
+.form-group{
+    margin-bottom:7px !important;
+}
+.clear{
+    clear:both;
+}
+button{
+    cursor:pointer;
+}
+.bold{ 
+    font-weight:600;
+}
+.inline-block{
+    display:inline-block;
+}
+.block{
+    display:block;
+}
+.toaster-div{
+    display:block;
+    position:fixed;
+    z-index:100;
+    width:70%;
+    text-align:center;
+    top:15px;
+    left: 15%;
+}
+.toaster-div span{
+    display:inline-block;
+    padding:9px 20px;
+    border:1px solid #3cb46e;
+    font-size:13px;
+    min-width:200px;
+    border-radius:2px;
+    color:#3cb46e;
+}
+.green-button{
+    background:#3cb46e;
+    transition: all .2s ease-in-out;
+    color:white;
+    border:none;
+}
+.green-button:hover{
+    background:green;
+}
+.zero-button{
+    display:inline-block;
+    border:none;background:none;
+}
+/***************************************   
+        Template Socials
+****************************************/
+
+.fb-bg{
+    background:#3b5998;
+}
+.tw-bg{
+    background:#00aced;
+}
+.yt-bg{
+    background:#bb0000;
+}
+.gh-bg{
+    background:#6e5494;
+}
+.gg-bg{
+    background:#ea4335;
+}
+
+/***************************************   
+        Template Links
+****************************************/
+
+a,
+a:link,
+a:active,
+a:visited,
+a:hover{
+    color:#0275d8;
+    text-decoration:none;
+}
+
+/***************************************   
+        Template Overlays
+
+*  .overlay
+*  .overlay-top
+*  #main-overlay
+*  #main-overlay-top
+
+****************************************/
+
+.main-overlay{
+    display:block;
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:black;
+    opacity:0.6;
+    top:0;left:0;
+    z-index:51;
+}
+.main-overlay-top{
+    display:block;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;left:0;
+    z-index:52;
+}
+.overlay{
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;left:0;
+    z-index:48;
+}
+.overlay-top{
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;left:0;
+    z-index:49;
+}
+
+/***************************************   
+            Whiteboxes
+****************************************/
+
+.main-whitebox{
+    display:block;
+    width:450px;
+    min-height:400px;
+    background:white;
+    border-radius:7px;
+    border:1px solid gray;
+    margin:3% auto 0;
+    padding:30px 20px 40px;
+}
+
+/***************************************   
+            Pagination
+****************************************/
+
+.pagination li button{
+    color: gray;
+    font-size:16px;
+    padding-left:17px;
+    padding-right:17px;
+    font-weight:100;
+}
+.pagination li button:hover{
+    color: black;
+}
+
+
+.loader-image-div{
+    display:inline-block;
+    width:70px;
+    max-width:70px;
+    max-width:70px;
+    height:50px;
+    min-height:50px;
+    max-height:50px;
+    overflow:hidden;
+}
+.oader-image-div img{
+    display: block;
+    width:98%;
+    margin:0 auto;
+}
+
+/***************************************   
+            Partials
+****************************************/
+
+.fieldsetA input{
+    display:inline-block;
+    border:1px solid lightgray;
+    border-radius:2px;
+    padding:5px 8px;
+    font-weight:200;
+    font-size:14px;
+    min-width:82%;
+    max-width:82%;
+}
+.fieldsetA button{
+    display:inline-block;
+    padding:6px 0 5px;
+    width:35px;
+    max-width:12%;
+    margin-left:3%;
+    font-size:14px;
+    border-radius:2px;
+}

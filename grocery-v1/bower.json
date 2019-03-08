@@ -1,0 +1,21 @@
+{
+  "name": "grocery-v1",
+  "description": "A grocery shop application built with React, ExpressJS and MonngoDB",
+  "main": "index.js",
+  "authors": [
+    "abdulfataiaka <abdulfataiaka@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/abdulfataiaka/grocery-v1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^16.1.0",
+    "skeleton": "^2.0.4"
+  }
+}

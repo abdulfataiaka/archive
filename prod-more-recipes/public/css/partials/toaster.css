@@ -1,0 +1,26 @@
+#toaster-div{
+    display:block;
+    position: fixed;
+    bottom:6%;
+    left:2%;
+    z-index: 1000;
+    width: 340px;
+    max-width:100%;
+    overflow:hidden;
+    background:#3cb46e;
+    min-height:10px;
+    box-shadow: 0 0 15px 1px #3cb46e;
+    border-radius: 2px;
+    transition: background 0.4s;
+    cursor: pointer;
+}
+#toaster-div .message{
+    display:block;
+    padding:15px 15px;
+    font-size:16px;
+    color:white;
+    font-weight:100;
+}
+#toaster-div:hover{
+    background: green;
+}

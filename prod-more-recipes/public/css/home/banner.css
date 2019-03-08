@@ -1,0 +1,35 @@
+/***************************************   
+            Banner
+****************************************/
+
+#banner{
+    width:100%;
+    position:relative;
+    min-height:450px;
+    max-height:450px;
+    overflow:hidden;
+    background:black;
+}
+#banner-overlay{
+    background:black;
+    opacity:0.4;
+}
+#banner-heading-1,#banner-heading-2{
+    display:block;
+    font:50px 'Open Sans',arial;
+    font-weight:600;
+    color:white;
+}
+#banner-heading-1{
+    margin-top:120px;
+}
+#banner-heading-2{
+    margin-top:0;
+}
+#banner-heading-3{
+    display:block;
+    color:white;
+    font:18px 'Open Sans',arial;
+    font-weight:400;
+    margin:20px auto 20px;
+}

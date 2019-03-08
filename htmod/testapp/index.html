@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- 
+Objective
+
+Users must still be able to do every html operations but do more with out introductions
+
+A template processor is a software that combines a data model with a template to give a result document
+-->
+
+<!--
+it is advisable that {variables} and {context} files should be declared at
+the top as by default they will be assumed declared at the top, so for
+your understanding, top is best.
+-->
+
+<!--
+you shouldbe able to include file
+relatively to template file
+-->
+
+<!--
+There are different variable scopes for a specific template
+- global scope
+- block scope
+
+Note that blocks should still have access to parent scopes for variable
+not overshadowed in the block
+-->
+
+<!--
+Variables declared should be placed in their immediate scope, the system
+move up the heiracy to search for needed variables
+-->
+
+<!--
+Expected features
+
+***************
+## Variables ##
+***************
+
+We should be able to create variables
+<t$ name := 'Abdulfatai'>
+
+We should be able to render variables to page
+<t= $name is $age year hold>
+
+We should be able to pass variables to functions when rendering
+<t= name|upcase|maxchr:5>
+
+We should be able to update a variable
+<t$ name := 'Aka'>
+
+****************
+## Evaluation ##
+****************
+
+- composite expressions for evaluation should be enclosed in ()
+- the behave like variables that nust returns a value
+
+
+
+
+- Using function : uses defined functions
+- Includes : include other external files
+- Looping
+- Conditional
+- Assignments : Passing references to sub templates
+- Errors : outputs template script errors
+- Natural Template : Does not break the actual structure of the template
+- Inheritance : Allow to extend for a layout
+-->
+
+<t$ age := 20>
+
+<html>
+<head>
+  <t+ '/partials/head'>
+</head>
+<body>
+
+  <!-- evaluate an expression -->
+  <t$ age := (age + years)>
+
+  <ul>
+    <t* name :in names>
+      <li><t= (name + ' ' + sex)> is <t= age> years hold</t></li>
+    </t*>
+  </ul>
+
+  <h1>What is your age range</h1>
+  
+  <t% age :gt 10 :& age :lt 20>
+    <h6>I am in Adult group</h6>
+  <t!% (age :lt 20 :: age :eq 40)>
+    <h6>I am in Young group</h6>
+  <t!>
+    <h6>I am in Mid group</h6>
+  </t%>
+  
+  <t* number :in |20, 50|>
+    <h1>This is number <t= number></h1>
+  </t*>
+</body>
+</html>

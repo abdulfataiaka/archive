@@ -1,0 +1,1667 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>More recipe API DOCS</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#base-url" class="toc-h1 toc-link" data-title="base-url">Base Url</a>
+          </li>
+          <li>
+            <a href="#sign-in" class="toc-h1 toc-link" data-title="sign-in">Sign In</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#sign-up" class="toc-h1 toc-link" data-title="sign-up">Sign Up</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-2" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-2" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-user" class="toc-h1 toc-link" data-title="get-user">Get User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-3" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#update-user-details" class="toc-h1 toc-link" data-title="update-user-details">Update user details</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-4" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-3" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#change-password" class="toc-h1 toc-link" data-title="change-password">Change password</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-5" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-4" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-2" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#add-as-favorite" class="toc-h1 toc-link" data-title="add-as-favorite">Add as favorite</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-6" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-5" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-3" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-favorites" class="toc-h1 toc-link" data-title="get-favorites">Get favorites</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-7" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-2" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#delete-a-favorite" class="toc-h1 toc-link" data-title="delete-a-favorite">Delete a favorite</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-8" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-6" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-4" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-categories" class="toc-h1 toc-link" data-title="get-categories">Get categories</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-9" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-3" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-popular-recipes" class="toc-h1 toc-link" data-title="get-popular-recipes">Get popular recipes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-10" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-catalog-recipes" class="toc-h1 toc-link" data-title="get-catalog-recipes">Get catalog recipes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-11" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#add-recipe" class="toc-h1 toc-link" data-title="add-recipe">Add recipe</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-12" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-7" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-5" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#edit-recipe" class="toc-h1 toc-link" data-title="edit-recipe">Edit recipe</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-13" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-8" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-6" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-recipe" class="toc-h1 toc-link" data-title="get-recipe">Get recipe</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-14" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-4" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#upvote-recipe" class="toc-h1 toc-link" data-title="upvote-recipe">Upvote recipe</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-15" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-5" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+                  <li>
+                    <a href="#headers-7" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#downvote-recipe" class="toc-h1 toc-link" data-title="downvote-recipe">Downvote recipe</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-16" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-6" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+                  <li>
+                    <a href="#headers-8" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#post-review" class="toc-h1 toc-link" data-title="post-review">Post review</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-17" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-9" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-9" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#delete-recipe" class="toc-h1 toc-link" data-title="delete-recipe">Delete recipe</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-18" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-7" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+                  <li>
+                    <a href="#headers-10" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#add-category" class="toc-h1 toc-link" data-title="add-category">Add category</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-19" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-10" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-11" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#delete-category" class="toc-h1 toc-link" data-title="delete-category">delete category</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-20" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters-8" class="toc-h2 toc-link" data-title="url-parameters">Url parameters</a>
+                  </li>
+                  <li>
+                    <a href="#headers-12" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#add-favorite-to-category" class="toc-h1 toc-link" data-title="add-favorite-to-category">Add favorite to category</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-21" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-11" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-13" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#remove-favorite-from-category" class="toc-h1 toc-link" data-title="remove-favorite-from-category">Remove favorite from category</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-22" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#form-data-12" class="toc-h2 toc-link" data-title="form-data">Form data</a>
+                  </li>
+                  <li>
+                    <a href="#headers-14" class="toc-h2 toc-link" data-title="headers">Headers</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>More Recipes API Documentation</p>
+
+<p>More-Recipes provides a platform for users to share the recipe ideas they have invented or learnt. This gives them the opportunty to get reviews from other users all around the world.</p>
+
+<p>This API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>.</p>
+<h1 id='base-url'>Base Url</h1>
+<p>These are the base url which are to prepend request routes for API consumption </p>
+
+<blockquote>
+<p>Heroku     : https://prod-more-recipes.herokuapp.com/api/v1/
+<br><br>
+Local  : http://localhost:8081/api/v1/</p>
+</blockquote>
+<h1 id='sign-in'>Sign In</h1>
+<p>Registered user gain access to the application by signing in and getting authenticated</p>
+
+<blockquote>
+<p>The request returns the below response if successful</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Signin was successful"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWJkdWxmYXRhaSIsImF2YXRhciI6bnVsbCwiaWF0IjoxNTE3NDE1NTEzLCJleHAiOjE1MTc1MDE5MTN9.wr2IRrXhlHeOX9sT2Wxeooh5OiOLu85uBbIxlvdC7bo"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when username is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The username field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when password is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The password field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /users/signin</code></p>
+<h3 id='form-data'>Form data</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>The exact username provided by user during registration</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The password provided by user during registration</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns a token along with some brief information about the user
+</aside>
+<h1 id='sign-up'>Sign Up</h1>
+<p>This provides a form of registration for visitors that wants to have an account on the platform</p>
+
+<blockquote>
+<p>The request returns the below response if successful</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Signup was successful"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olaide"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aka Abdulfatai"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoib2xhaWRlIiwiYXZhdGFyIjpudWxsLCJpYXQiOjE1MTc1ODg5MzcsImV4cCI6MTUxNzY3NTMzN30.-A_r3TwyErTj9zZaTGQVbRBCt9J4Y7AmtmL1XB5NzlA"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when name is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The name field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when username is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The username field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when password is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The password field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /users/signup</code></p>
+<h3 id='form-data-2'>Form data</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>A string that represent the fullname of the user</td>
+</tr>
+<tr>
+<td>username</td>
+<td>A string that represent the username of a user and this is chosen by the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>An optional or welformed email address of the user</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The password provided by user during registration</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns a token along with some brief information about the user
+</aside>
+<h1 id='get-user'>Get User</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User details fetched successfully"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abdulfatai"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"others"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-28T09:56:42.913Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T16:11:51.537Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no user is assigned to the provided userId</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User does not exists"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /users/{userId}</code></p>
+<h3 id='url-parameters'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>An integer that represent the id of the user whose details is to be gotten</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the user details
+</aside>
+<h1 id='update-user-details'>Update user details</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User details updated successfully"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abdulfatai"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"others"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when name is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The name field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when gender is neither empty field, male, female nor others</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid gender provided"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT /users/personal</code></p>
+<h3 id='form-data-3'>Form data</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>A non empty string that represents user&#39;s fullname</td>
+</tr>
+<tr>
+<td>email</td>
+<td>An optional or welformed email address of the user</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>A string thats either male, female or others</td>
+</tr>
+</tbody></table>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the user&#39;s token needed for processing the request</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the updated details
+</aside>
+<h1 id='change-password'>Change password</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password changed successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when the current password is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Provide your current password"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when the new password is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New password field is required"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PUT /users/password</code></p>
+<h3 id='form-data-4'>Form data</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currentPassword</td>
+<td>A string representing the password user is currently using</td>
+</tr>
+<tr>
+<td>newPassword</td>
+<td>A string representing the new password the user wants to use</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the user&#39;s token needed for processing the request</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing a success message
+</aside>
+<h1 id='add-as-favorite'>Add as favorite</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recipe successfully added as favorite"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no recipe is found for the recipeId provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recipe to be added as favorite does not exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST /users/favorites</code></p>
+<h3 id='form-data-5'>Form data</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipeId</td>
+<td>An integer representing the Id of the recipe to be added as favorite</td>
+</tr>
+</tbody></table>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the user&#39;s token needed for processing the request</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the recipeId and the favoriteId as `id`
+</aside>
+<h1 id='get-favorites'>Get favorites</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"favorite recipes fetched successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"recipeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02T17:16:50.960Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02T17:16:50.960Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Recipe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the procedure for the recipe"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New recipe"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new ing, another ing"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"noviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://res.cloudinary.com/abdulfatai/image/upload/v1517422129/nxqm6t1tojhmmwvxiew2.jpg"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abdulfatai"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET /users/{userId}/favorites</code></p>
+<h3 id='url-parameters-2'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>An integer that represent the id of the user whose favorites is to be gotten</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing an array of all favorite recipes of user
+</aside>
+<h1 id='delete-a-favorite'>Delete a favorite</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"favorite recipe deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no recipe is found for the recipeId provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recipe to be deleted from favorites does not exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>DELETE /users/favorites</code></p>
+<h3 id='form-data-6'>Form data</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipeId</td>
+<td>An integer representing the Id of the recipe to be added as favorite</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the user&#39;s token needed for processing the request</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the `id` of the favorite recipe deleted
+</aside>
+<h1 id='get-categories'>Get categories</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User categories fetch successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bully"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T17:46:20.394Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T17:46:20.394Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET /users/{userId}/categories</code></p>
+<h3 id='url-parameters-3'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>An integer that represent the id of the user whose categories is to be fetched</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing an array of all user categories
+</aside>
+<h1 id='get-popular-recipes'>Get popular recipes</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Popular recipes fetched successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the procedure for the recipe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New recipe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new ing, another ing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"noviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://res.cloudinary.com/abdulfatai/image/upload/v1517422129/nxqm6t1tojhmmwvxiew2.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abdulfatai"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET /recipes?sort=upvotes&amp;order=desc</code></p>
+
+<aside class="success">
+This returns an object containing an array of popular recipes
+</aside>
+<h1 id='get-catalog-recipes'>Get catalog recipes</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipes fetched successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pagination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"totalCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pageCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pageSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pageLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"recipes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the procedure for the recipe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New recipe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new ing, another ing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"noviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://res.cloudinary.com/abdulfatai/image/upload/v1517422129/nxqm6t1tojhmmwvxiew2.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abdulfatai"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET /recipes</code></p>
+
+<aside class="success">
+This returns an object containing an array of all recipes with pagination
+</aside>
+<h1 id='add-recipe'>Add recipe</h1>
+<p>A new recipe can be added with the below endpoint</p>
+
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recipe added successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A new recipe for testing"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First, Second,Third"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a simple procedure for this recipe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"noviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://res.cloudinary.com/abdulfatai/image/upload/v1517596752/ddxv6uj7gml5omp26iis.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02T18:39:12.547Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02T18:39:12.547Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no title is provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The title field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no ingredients is provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The ingredients field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no procedure is provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The procedure field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when either recipeImageFile or uploadImage is not provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image should be of type png, jpg or jpeg and maxsize 500 KB"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-12'>HTTP Request</h3>
+<p><code>POST /recipes</code></p>
+<h3 id='form-data-7'>Form data</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>A string representing the title of the recipe</td>
+</tr>
+<tr>
+<td>ingredients</td>
+<td>A string representing the ingredients for the recipe</td>
+</tr>
+<tr>
+<td>procedure</td>
+<td>A string representing the procedure for preparing recipe</td>
+</tr>
+<tr>
+<td>recipeimageFile</td>
+<td>An image file select via the file chooser</td>
+</tr>
+<tr>
+<td>uploadImage</td>
+<td>An integer ( 0</td>
+</tr>
+</tbody></table>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing updated recipe details and recipe image is uploaded to cloudinary.
+</aside>
+<h1 id='edit-recipe'>Edit recipe</h1>
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipe updated successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a simple procedure for this recipe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A new recipe for testing"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First, Second,Third"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"noviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://res.cloudinary.com/abdulfatai/image/upload/v1517150108/pdzyyd9cpzwhwbbf5hks.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-28T14:35:08.662Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T16:19:03.277Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no title is provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The title field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no ingredients is provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The ingredients field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no procedure is provided</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The procedure field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-13'>HTTP Request</h3>
+<p><code>PUT /recipes/{recipeId}</code></p>
+<h3 id='form-data-8'>Form data</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>A string representing the title of the recipe</td>
+</tr>
+<tr>
+<td>ingredients</td>
+<td>A string representing the ingredients for the recip</td>
+</tr>
+<tr>
+<td>procedure</td>
+<td>A string representing the procedure for preparing recipe</td>
+</tr>
+<tr>
+<td>recipeimageFile</td>
+<td>An image file select via the file chooser</td>
+</tr>
+<tr>
+<td>uploadImage</td>
+<td>An integer ( 0</td>
+</tr>
+</tbody></table>
+<h3 id='headers-6'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the nre recipe details and recipe image is uploaded to cloudinary if provided
+</aside>
+<h1 id='get-recipe'>Get recipe</h1>
+<p>To get the details of a particular recipe</p>
+
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipe fetch succesfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the procedure for the recipe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New recipe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new ing, another ing"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"noviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://res.cloudinary.com/abdulfatai/image/upload/v1517422129/nxqm6t1tojhmmwvxiew2.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T18:08:50.182Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abdulfatai"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02T17:06:47.353Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Reviews"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when no recipe exist with the provided recipeId</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipe does not exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-14'>HTTP Request</h3>
+<p><code>GET /recipes/{recipeId}</code></p>
+<h3 id='url-parameters-4'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipeId</td>
+<td>An integer that represents the <code>id</code> of the recipe to be fetched</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the recipe details
+</aside>
+<h1 id='upvote-recipe'>Upvote recipe</h1>
+<p>To vote up an existing recipe by an authenticated user.</p>
+
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipe upvoted successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-15'>HTTP Request</h3>
+<p><code>PUT /recipes/{recipeId}/upvote</code></p>
+<h3 id='url-parameters-5'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipeId</td>
+<td>An integer that represents the <code>id</code> of the recipe to be upvoted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-7'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the upvoted recipe id
+</aside>
+<h1 id='downvote-recipe'>Downvote recipe</h1>
+<p>To vote down an existing recipe by an authenticated user.</p>
+
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipe downvoted successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-16'>HTTP Request</h3>
+<p><code>PUT /recipes/{recipeId}/downvote</code></p>
+<h3 id='url-parameters-6'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipeId</td>
+<td>An integer that represents the <code>id</code> of the recipe to be downvoted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-8'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the downvoted recipe id
+</aside>
+<h1 id='post-review'>Post review</h1>
+<p>To post review for an existing recipe by an authenticated user</p>
+
+<blockquote>
+<p>The request returns the below response if successful</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Review posted successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"review"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello there"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"User"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdulfatai"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T17:18:10.421Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response when the comment field is empty</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The comment field is required."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-17'>HTTP Request</h3>
+<p><code>POST /recipes/{recipeId}/reviews</code></p>
+<h3 id='form-data-9'>Form data</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>comment</td>
+<td>An string that represent the comment to be posted as a review</td>
+</tr>
+</tbody></table>
+<h3 id='headers-9'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the comment and the user details of the user that posted the review
+</aside>
+<h1 id='delete-recipe'>Delete recipe</h1>
+<p>To delete an existing recipe</p>
+
+<blockquote>
+<p>The request returns the below response if successful</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recipe deleted successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recipeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-18'>HTTP Request</h3>
+<p><code>DELETE /recipes/{recipeId}</code></p>
+<h3 id='url-parameters-7'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipeId</td>
+<td>An integer that represents the <code>id</code> of the recipe to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-10'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the `id` of the recipe deleted
+</aside>
+<h1 id='add-category'>Add category</h1>
+<p>To add category by an authenticated user.</p>
+
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category added successfully"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bully"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T17:46:20.394Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31T17:46:20.394Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-19'>HTTP Request</h3>
+<p><code>POST /categories</code></p>
+<h3 id='form-data-10'>Form data</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>A string representing the name of the category to be added</td>
+</tr>
+</tbody></table>
+<h3 id='headers-11'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing the details of the category added
+</aside>
+<h1 id='delete-category'>delete category</h1>
+<p>To delete a category added by an authenticated user.</p>
+
+<blockquote>
+<p>The request returns the below response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category delete successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-20'>HTTP Request</h3>
+<p><code>DELETE /categories/{categoryId}</code></p>
+<h3 id='url-parameters-8'>Url parameters</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>categoryId</td>
+<td>An integer that represents the <code>id</code> of the category to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-12'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing a message that operation was successful
+</aside>
+<h1 id='add-favorite-to-category'>Add favorite to category</h1>
+<p>To add a favorited recipe to a category by an authenticated user</p>
+
+<blockquote>
+<p>The request returns the below response if successful</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Favorite added to category"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response if not favorite with the provided favoriteId exist</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Favorite does not exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-21'>HTTP Request</h3>
+<p><code>PUT /categories/add</code></p>
+<h3 id='form-data-11'>Form data</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>favoriteId</td>
+<td>An integer that represents the <code>id</code> of the favorite recipe to be added to category.</td>
+</tr>
+<tr>
+<td>categoryId</td>
+<td>An integer that represents the <code>id</code> of the category to add favorite to.</td>
+</tr>
+</tbody></table>
+<h3 id='headers-13'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing a message that operation was successful
+</aside>
+<h1 id='remove-favorite-from-category'>Remove favorite from category</h1>
+<p>To remove a favorited recipe from a category by an authenticated user</p>
+
+<blockquote>
+<p>The request returns the below response if successful</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Favorite removed from category"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The request returns the below response if not favorite with the provided favoriteId exist</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Favorite does not exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-22'>HTTP Request</h3>
+<p><code>PUT /categories/remove</code></p>
+<h3 id='form-data-12'>Form data</h3>
+<table><thead>
+<tr>
+<th>param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>favoriteId</td>
+<td>An integer that represents the <code>id</code> of the favorite recipe to be removed</td>
+</tr>
+</tbody></table>
+<h3 id='headers-14'>Headers</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>x-user-token</td>
+<td>A string that represent the token of currently loggedIn user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+This returns an object containing a message that operation was successful
+</aside>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

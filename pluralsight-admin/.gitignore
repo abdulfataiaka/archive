@@ -1,0 +1,12 @@
+# ignore system files
+.DS_Store
+.swp
+.vs_code
+.nyc_output/
+
+# ignore node_modules
+node_modules/
+
+# ignore build folder
+/build/
+

@@ -1,0 +1,110 @@
+
+/***************************************   
+   Common to both Sign In and Sign Up
+****************************************/
+
+.hr{
+    display:block;
+    min-height:1px;
+    max-height:1px;
+    overflow:hidden;
+    background:lightgray;
+    min-width:50px;
+}
+.su-icon{
+    font-size:26px;
+    margin:4px 8px 0 0
+}
+.su-label{
+    color:gray;font-weight:600;font-size:10px;
+}
+.su-field{
+    display:block;width:100%;padding:7px 10px;border:1px solid lightgray;
+    border-radius:2px;font-size:17px;font-weight:200;
+}
+.su-button{
+    display:block;
+    margin-top:20px;
+    padding:12px 0;
+    background:#3cb46e;
+    color:white;
+    border:none;
+    font-size:12px;
+    transition: all .2s ease-in;
+    width:100%;
+    border-radius:4px;
+}
+.su-button:hover{
+    background:green;
+}
+.su-heading{
+    font-size:30px;
+    font-weight:200;
+}
+.su-heading-small{
+    font-size:14px;
+    color:gray;
+    margin:12px auto 20px;
+    font-weight:400;
+}
+.su-error{
+    display:block;
+    width:100%;
+    overflow:hidden;
+    background:#F1F1F1;
+    font-size:14px;
+    font-weight:200;
+    color:gray;
+    padding:10px 10px;
+    border:1px solid lightgray;
+    border-radius:2px;
+    margin:0 0 15px;
+}
+.su-error-success{
+    background: green;
+    border-color:green;
+    color:white;
+}   
+.su-error-failed{
+    background:#FF9481 ;
+    border-color: #FF9494;
+    color:white;
+}
+.su-close-div{
+    display:block;
+    text-align: center;margin:40px auto 0;
+}
+.su-close-button{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    border:1px solid lightgray;
+    color:lightgray;
+    border-radius: 50%;
+    background: none;
+    transition: all 0.2s ease-in;
+    font-size:30px;
+}
+.su-close-button:hover{
+    background:lightgray;
+    color:black;
+}
+/***************************************   
+        Sign Up only
+****************************************/
+
+
+/***************************************   
+        Sign In only
+****************************************/
+
+#signin-forgot{
+    display:block;
+    font-size:11px;
+    text-align: center;
+    margin:15px auto 0;
+    font-weight:600;
+}
+#signin-forgot:hover{
+    color:#C2585A;
+}

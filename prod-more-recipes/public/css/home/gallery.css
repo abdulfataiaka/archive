@@ -1,0 +1,39 @@
+/***************************************   
+           Homepage gallery
+****************************************/
+
+#gallery{
+    position:relative;
+    display:block;
+    margin:0 auto;
+    padding:20px 0;
+    min-height:300px;
+    overflow:hidden;
+}
+
+.gallery-lbut{
+    display:inline-block;
+    border:1px solid gray;
+    border-radius:4px;
+    padding:10px 10px;
+    transition: all .2s ease-in-out;
+    font-size:11px;
+    font-weight:400;
+    color:gray;
+}
+.gallery-lbut:hover{
+    color:black;
+    border-color:black;
+}  
+.gallery-dot{
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:red
+    ;margin:5px auto 0;
+}
+.gallery-text{
+    font-weight:600;
+    font-size:17px;
+}
+

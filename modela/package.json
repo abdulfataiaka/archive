@@ -1,0 +1,38 @@
+{
+  "name": "modela",
+  "version": "1.0.0",
+  "description": "A javascript library for handling page data",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "nodemon": "^1.18.5",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/webpack-cli/bin/cli.js --config ./webpack/index.js --watch",
+    "start": "rm -rf ./build || true && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulfataiaka/modela.git"
+  },
+  "keywords": [
+    "modela",
+    "Store",
+    "Storage"
+  ],
+  "author": "Abdulfatai Aka <abdulfataiaka@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulfataiaka/modela/issues"
+  },
+  "homepage": "https://github.com/abdulfataiaka/modela#readme"
+}

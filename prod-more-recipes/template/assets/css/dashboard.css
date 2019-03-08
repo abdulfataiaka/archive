@@ -1,0 +1,476 @@
+body{
+    background:#e9ebee;
+}
+
+/*********************************/
+/*   Dashboard Profile           */
+/*********************************/
+
+/* Section - 1 */
+#profile-info{
+    display:block;
+    width:98%;
+    border:1px solid #E8E8E8;
+    background:white;
+    margin:0px auto 12px;
+    min-height:100px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#user-image{
+    display:inline-block;
+    border-radius:50%;
+    padding:4px;
+    background:white;
+    margin:0;
+    overflow:hidden;
+}
+#user-image img{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+}
+#profile-info .align{
+    display:block;
+    width:90%;
+    margin:20px auto 0;
+}
+#profile-controls button{
+    display:inline-block;
+    border:none;
+    background:none;
+    color:gray;
+    margin-top:10px;
+    font-size:16px;
+    font-weight:400;
+}
+#profile-info .align .user-name{
+    margin:10px auto 0;
+}
+
+#profile-info .align .user-name{
+    margin-bottom:30px;    
+}
+#profile-info .align .user-name h5{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+#profile-info .align .user-name h6{
+    display:block;
+    font-size:13px;
+    font-weight:400;
+    color:gray;
+}
+.user-info{
+    display:block;
+    font-size:15px;
+    margin:0 auto 15px;
+}
+.user-info i{
+    min-width:20px;
+    max-width:20px;
+}
+
+/* Section - 2 */
+#profile-edit{
+    display:block;
+    width:98%;
+    border:1px solid #E8E8E8;
+    border-radius:4px;
+    background:white;
+    margin:0 auto 12px;
+    padding:20px 0 15px;
+    min-height:100px;
+}
+#profile-edit .align{
+    display:block;
+    width:90%;
+    margin:0 auto;
+}
+#profile-edit h5{
+    font-size:13px;
+    font-weight:600;
+    margin:10px 0 30px;
+}
+
+/* Section - 3 */
+#profile-password{
+    display:block;
+    width:98%;
+    border:1px solid #E8E8E8;
+    border-radius:4px;
+    background:white;
+    margin:0 auto 12px;
+    padding:20px 0 15px;
+    min-height:100px;
+}
+#profile-password .align{
+    display:block;
+    width:90%;
+    margin:0 auto;
+}
+
+#profile-password h5{
+    font-size:13px;
+    font-weight:600;
+    margin:10px 0 30px;
+}
+    
+
+.profile-field-group{
+    display:block;
+    margin:0 auto 18px;
+}
+.profile-field-group h6{
+    display:block;
+    font-size:11px;
+    color:gray;
+    margin:0 0 5px;
+}
+.profile-field-group input{
+    display:block;
+    border:1px solid #e5e5e5;
+    background:#fafafa;
+    font-size:13px;
+    width:100%;
+    border-radius:2px;
+    padding:6px 10px;
+}
+.profile-field-group input:focus{
+    background: white;
+}
+.profile-button{
+    display:block;
+    font-size:10px;
+    padding:6px 10px;
+    border-radius:2px;
+}
+
+/*********************************/
+/*         Main content          */
+/*********************************/
+
+#content{
+    display:block;
+    width:100%;
+    border:1px solid #E8E8E8;
+    margin:0 auto;
+}
+
+/*********************************/
+/*          Navigation           */
+/*********************************/
+
+#navigation{
+    display:block;
+    width:100%;
+    background:white;
+    padding:30px 3% 10px;
+}
+.nav-item{
+    display:inline-block;
+}
+.nav-item h6{
+    display:inline-block;
+    font-size:12px;
+    margin:4px 4px 0 0;
+    font-weight:600;
+    color:gray;
+}
+.nav-item span{
+    display:inline-block;
+    padding:3px 9px;
+    border-radius:2px;
+    background:#eceff1;
+    font-size:11px;
+    color:#78909c;
+}
+
+/*********************************/
+/*            Header             */
+/*********************************/
+
+#content-header{
+    display:block;
+    width:100%;
+    padding:20px 0.5%;
+    margin:0 auto;
+}
+
+#content-header .title{
+    display:inline-block;
+    font-size:13px;
+    font-weight:600;
+    margin-top:8px;
+}
+#content-header .green-button{
+    display:inline-block;
+    font-weight:600;
+    background:#3cb46e;
+    height:32px;
+    border-radius:5px;
+    transition: all .2s ease-in-out;
+    color:white;
+    border:none;
+    font-size:11px;
+    margin:0;
+    padding:7px 10px 6px;
+}
+#content-header .green-button:hover{
+    background:green;
+}
+
+/*********************************/
+/*      content view             */
+/*********************************/
+
+.content-view{
+    display:block;
+    width:100%;
+    background:white;
+    padding:0 3%;
+    margin:20px auto;
+}
+
+/*********************************/
+/*           confirm Modal               */
+/*********************************/
+
+.confirm-check-button{
+    display:inline-block;
+    background:none;
+    border:none;
+    color:green;
+    font-size:25px;
+}
+.confirm-times-button{
+    display:inline-block;background:none;border:none;color:red;font-size:25px;
+}
+.recipe-modal-error{
+    display:block;
+    border:1px solid lightgray;
+    background:#F3F3F3;
+    padding:11px 8px;
+    font-size:14px;
+    border-radius:3px;
+    font-weight:200px;
+}
+.recipe-modal-xbut{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:none;
+    margin-top:-9px;
+    border:1px solid lightgray;
+    color:gray;
+}
+
+
+/*********************************/
+/*        Add recipe modal       */
+/*********************************/
+
+.recipe-label{
+    display:block;
+    margin:0 auto 10px;
+    font-size:12px;
+    font-weight:600;
+}
+.recipe-title-field{
+    display:block;
+    width:100%;
+    font-size:20px;
+    font-weight:200;
+    border:none;
+    border-bottom:1px solid lightgray;
+    padding-bottom:10px;
+}
+.recipe-main-button{
+    display:block;
+    margin:30px 0 0;
+    padding:10px 20px;
+    font-size:14px;
+    border-radius:2px;
+}
+.recipe-dummy-image{
+    display:block;
+    background:#E8E8E8;
+    border-radius:2px;
+    min-height:200px;
+    max-height:200px;
+    overflow:hidden;
+    width:100%;
+    text-align:center;
+}
+.recipe-dummy-image i{
+    display:inline-block;
+    margin:0 auto;
+    font-size:50px;
+    color:gray;
+    margin-top:60px;
+}
+.recipe-dummy-image div{
+    display:block;
+    text-align:center;
+    font-size:12px;
+    font-weight:600;
+    margin:15px auto 0;
+}
+.recipe-ingredient-field{
+    display:inline-block;
+    border:1px solid lightgray;
+    border-radius:2px;
+    padding:5px 8px;
+    font-weight:200;
+    font-size:14px;
+    min-width:82%;
+    max-width:82%;
+}
+.recipe-ingredient-button{
+    display:inline-block;
+    padding:6px 0 5px;
+    width:35px;
+    max-width:12%;
+    font-size:14px;
+    border-radius:2px;
+}
+.recipe-ingredient-tag{
+    display:inline-block;
+    padding:7px 9px;
+    font-size:12px;
+    border-radius:2px;
+    background:#E8E8E8;
+    color:black;
+    margin:0 5px 10px 0;
+}
+
+/*********************************/
+/*         View Modal            */
+/*********************************/
+
+.recipe-white-boxes{
+    display:block;
+    width:100%;
+    background:white;
+    min-height:100%;
+    margin:0 auto;
+    border-radius:3px;
+    overflow:hidden;
+    padding:0 3%;
+}
+
+.recipe-view-title{
+    font-size:20px;
+    font-weight:400;
+    line-height:150%;
+    color:#0275d8;
+}
+.recipe-view-desc{
+    display:block;
+    font-size:13px;
+    font-weight:400;
+    height:500px;
+    min-height:500px;
+    max-height:500px;
+    overflow-x:hidden;
+}
+.recipe-author-image{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+.recipe-author-info{
+    display:inline-block;margin:4px 0 0 10px;
+}
+.recipe-author-info h6{
+    display:block;
+    font-size:10px;
+    font-weight:400;
+}
+.recipe-author-info h5{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    color:gray;
+}
+.recipe-view-button{
+    display:inline-block;
+    background:#f5f8fd;
+    border:1px solid #2481d766;
+    padding:2px 7px 3px;
+    border-radius:4px;
+}
+.recipe-view-button i{
+    color:#2481d7;
+}
+.recipe-view-button .text{
+    font-size:10px;
+    font-weight:600;
+    color:#2481d7;
+}
+.recipe-view-button .number{
+    color:gray;
+    font-size:11px;
+    font-weight:600;
+}
+.review-post-section{
+    padding:10px 2% 8px;
+    border-radius:2px;
+    background:#F4F4F4;
+    border:1px solid #F1F1F1;
+}
+.review-post-section h6{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+}
+.review-post-section textarea{
+    width:100%;
+    border:1px solid lightgray;
+    background:white;
+    border-radius:4px;
+    padding:4px 10px;
+    height:60px;
+    font-weight:200;
+    font-size:14px;
+}
+.recipe-view-comments{
+    display:block;
+    height:360px;
+    min-height:360px;
+    max-height:360px;
+    overflow-x:hidden;
+}
+.review-comment-image{
+    width:35px;
+    height:35px;
+    max-width:15%;
+    margin:4px 3% 0 0;
+    border-radius:2px;
+}
+.review-comment-content{
+    display:inline-block;
+    max-width:85%;
+}
+.review-comment-user{
+    display:inline-block;
+    font-size:12px;
+    font-weight:600;
+}
+.review-comment-time{
+    display:inline-block;
+    margin-left:10px;
+    color:gray;
+    font-size:12px;
+}
+.review-comment-body{
+    display:block;
+    font-size:12px;
+    font-weight:200;
+    line-height:150%;
+    margin-top:5px;
+}

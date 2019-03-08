@@ -1,0 +1,54 @@
+@import './partials/main';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  min-width: 550px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+a {
+  &.active {
+    color: orange;
+  }
+
+  &:hover {
+    color: #557eff !important;
+    text-decoration: none !important;
+  }
+}
+
+nav {
+  padding: 20px 0;
+
+  a span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: $blue;
+    color: white;
+    border-radius: 50%;
+    margin-left: 5px;
+    text-align: center;
+    padding-top: 2px;
+  }
+}
+
+.tb-btn {
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.empty-content{
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+}

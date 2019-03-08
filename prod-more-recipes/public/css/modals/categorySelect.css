@@ -1,0 +1,34 @@
+.categoryModalItem{
+    display:block;
+    margin: 5px auto 20px;
+}
+
+.categoryModalItem input{
+    display:inline-block;
+    margin: 1px 10px 0 0;
+    zoom: 2;
+    cursor: pointer;
+}
+
+.categoryModalItem span{
+    display:inline-block;
+    font-size:19px;
+    font-weight: 300;
+}
+
+.categoryModalButton{
+    display:inline-block;
+    background:gray;
+    color: white;
+    border-radius:4px;
+    border:none;
+    font-size: 13px;
+    cursor: pointer;
+    padding:7px 13px;
+    margin-right: 10px;
+    transition: background 0.2s;
+}
+
+.categoryModalButton:hover{
+    background: #000000;
+}

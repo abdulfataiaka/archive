@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/font/init.css" rel="stylesheet" type="text/css">
+    <link href="assets/icons/fa/init.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="icon" href="assets/img/favicon.png"> -->
+    <!-- Page custom styles -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/home.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/partials.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!--**************************-->
+    <!--  Page overlays and whiteboxes  -->
+    <!--********************************-->
+
+    <div id="main-overlay"></div>
+    <div id="main-overlay-top">
+
+        <!-- Sign In Whitebox -->
+        <div id="signInWhiteBox" class="main-whitebox">
+            <h4 class="su-heading">
+                <i class="su-icon fa fa-coffee"></i>
+                Login to your account
+            </h4>
+            <h6 class="su-heading-small">
+                For accessibility to you recipe ideas
+            </h6>
+            <div class="row">
+                <div class="col-12">
+                    <div class="su-error">
+                        Please provide required information
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="su-label">USERNAME</label>
+                        <input id="email" class="su-field" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="su-label">PASSWORD</label>
+                        <input id="password" class="su-field" type="password">
+                    </div>
+                    <button class="su-button">LOGIN</button>
+                    <a href="#">
+                        <span class="" id="signin-forgot">FORGOT PASSWORD ?</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Whitebox -->
+        <div id="signUpWhiteBox" class="main-whitebox">
+            <h4 class="su-heading">
+                <i class="su-icon fa fa-cutlery"></i>
+                Create an account
+            </h4>
+            <h6 class="su-heading-small">
+                To manage and secure your recipe ideas
+            </h6>
+            <div class="row">
+                <div class="col-12">
+                    <div class="su-error">
+                        Please provide required information
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="su-label">USERNAME</label>
+                        <input id="email" class="su-field" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="su-label">EMAIL</label>
+                        <input id="email" class="su-field" type="text">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="password" class="su-label">PASSWORD</label>
+                                <input id="password" class="su-field" type="password">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="password" class="su-label">CONFIRM PASSWORD</label>
+                                <input id="password" class="su-field" type="password">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="float su-button">CREATE ACCOUNT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--**************************-->
+    <!--      Header section      -->
+    <!--**************************-->
+
+    <header>
+        <div class="page-align">
+            <div class="row">
+                <div class="col-10 col-md-5">
+                    <span id="header-logo">
+                        <img src="./assets/img/logo.png" class='float-left'>
+                        <div class='inline-block float-left'>
+                            <span class='block top'>MORE-RECIPES</span>
+                            <span class='block base'>Platform for sharing your recipe ideas</span>
+                        </div>
+                        <div class='clear'></div>
+                    </span>
+                </div>
+                <div class="hidden-md-up col-2">
+                    <button id="header-navbut" class="zero-button">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden-sm-down col-md-7">
+                    
+                    <div class='float-right inline-block'>
+                        <a href='./index.html' title='Homepage'>
+                            <span class="float-left header-icon">
+                                <i class="fa fa-home"></i>
+                            </span>
+                        </a>
+                        <a href='./catalog.html' title='Homepage'>
+                            <span class="float-left header-icon-B">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </a>
+                        <a href='./dashboard.html' title='Homepage'>
+                            <span class="float-left header-links">Dashboard</span>
+                        </a>
+                        <a href='javascript:;' id="signInModalShow">
+                            <span class="float-left header-links">Login</span>
+                        </a>
+                        <button class="float-left header-green-button" id="signUpModalShow" type="button">Join free</button>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="header-spacer"></div>
+    <div class="hidden-md-up" id="sm-nav">
+        <a href="#">
+            <div class="sm-nav-links">Home</div>
+            <div class="sm-nav-links">Search Recipes</div>
+            <div class="sm-nav-links">DASHBOARD</div>
+            <div class="sm-nav-links">LOGIN</div>
+            <div class="sm-nav-links">JOIN FREE</div>
+        </a>
+    </div>
+
+    <!--**************************-->
+    <!-- Banner section  -->
+    <!--**************************-->
+
+    <section id="banner" class="hidden-md-down">
+        <div class="overlay" id="banner-overlay"></div>
+        <div class="overlay-top">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="text-center" id="banner-heading-1">MORE</div>
+                    <div class="text-center" id="banner-heading-2">RECIPES</div>
+                    <p class="text-center" id="banner-heading-3">
+                        PRESENTING A PLATFORM FOR SHARING YOUR RECIPE IDEAS
+                    </p>
+                </div>
+            </div>
+        </div>
+        <video style="margin-top:-30px;" id="sampleMovie" width="100%" height="100%" autoplay loop>
+            <source src="assets/videos/banner.webm" type='video/webm' />
+        </video>
+    </section>
+
+    <!--**************************-->
+    <!-- Banner base  -->
+    <!--**************************-->
+
+    <section id="statistics" class="hidden-md-down">
+        <!--  Needed for page section redirect -->
+        <span id="aboutcfh"></span>
+        <div class="page-align">
+            <div id="banner-base-images" class="text-center">
+                <div class="statistic">
+                    <i class="fa fa-user"></i>
+                    <span>5000</span>
+                </div>
+                <div class="statistic">
+                    <i class="fa fa-thumbs-up"></i>
+                    <span>15000</span>
+                </div>
+                <div class="statistic">
+                    <i class="fa fa-cutlery"></i>
+                    <span>15000</span>
+                </div>
+                <div class="statistic">
+                    <i class="fa fa-group"></i>
+                    <span>15000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--**************************-->
+    <!--  Recipes -->
+    <!--**************************-->
+
+    <section id='gallery'>
+        <div class='page-align'>
+            <div class=''>
+                <div class='inline-block'>
+                    <span class='block gallery-text'>Popular</span>
+                    <span class='block gallery-dot'></span>
+                </div>
+                <a href="./catalog.html">
+                    <button class='float-right gallery-lbut'>VIEW CATALOG</button>
+                </a>
+            </div>
+            <div class='row mt-4'>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user1.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>abdulfatai</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/2.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user2.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>abdulfatai</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/5.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user1.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>micheal</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/3.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user1.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>micheal</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/3.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user1.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>abdulfatai</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/2.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user2.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>abdulfatai</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/5.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user1.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>micheal</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/3.jpg' class='bg-img'>
+                    </div>
+                </div>
+                <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
+                    <!--   A recipe div  -->
+                    <div class='recipe-div'>
+                        <div class='overlay'></div>
+                        <div class='overlay-top'>
+                            <div class='recipe-top-div'>
+                                <button class='float-right recipe-hover-button'>
+                                    <i class='fa fa-heart'></i>
+                                </button>
+                            </div>
+                            <div class='recipe-base-div'>
+                                <div class='inline-block'>
+                                    <img src='./assets/img/test/user1.jpg' class='float-left recipe-user-image'>
+                                    <span class='float-left recipe-user-name'>micheal</span>
+                                    <div class='clear'></div>
+                                </div>
+                                <a href="view.html">
+                                    <button class='float-right recipe-hover-button'>
+                                        <i class='fa fa-arrow-right'></i>
+                                    </button>
+                                </a>
+                                <div class='clear'></div>
+                            </div>
+                        </div>
+                        <img src='./assets/img/test/3.jpg' class='bg-img'>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--**************************-->
+    <!-- Footer section -->
+    <!--**************************-->
+
+    <footer>
+        <div id='top-section'>
+            <div id='footer-socials'>
+                <span class='footer-social'>
+                    <i class='fa fa-facebook'></i>
+                </span>
+                <span class='footer-social'>
+                    <i class='fa fa-linkedin'></i>
+                </span>
+                <span class='footer-social'>
+                    <i class='fa fa-twitter'></i>
+                </span>
+                <span class='footer-social'>
+                    <i class='fa fa-instagram'></i>
+                </span>
+            </div>
+            <p id='footer-base-text-1'>
+                HEALTY LEAVING WITH SOFT STOMACH AND GOOD RECIPED FOOD THAT CHANGES
+            </p>
+            <p id='footer-base-text-2'>
+                &copy;COPYRIGHTS MORE - RECIPES . 2017 | ABDULFATAI AKA
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+<!-- Scripts -->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/bootstrap/js/tether.min.js" type="text/javascript"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/controller.js" type="text/javascript"></script>
+
+</html>

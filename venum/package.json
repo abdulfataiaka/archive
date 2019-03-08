@@ -1,0 +1,32 @@
+{
+  "name": "venum",
+  "version": "1.0.0",
+  "description": "A frontend server with support for different client side technologies",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulfataiaka/venum.git"
+  },
+  "keywords": [
+    "venum",
+    "server",
+    "template"
+  ],
+  "author": "Abdulfatai <abdulfataiaka@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulfataiaka/venum/issues"
+  },
+  "homepage": "https://github.com/abdulfataiaka/venum#readme",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "mime-types": "^2.1.19",
+    "morgan": "^1.9.0"
+  }
+}

@@ -1,0 +1,31 @@
+language: "node_js"
+
+node_js:
+  - "8"
+
+cache:
+  directories:
+    - "node_modules"
+
+env:
+  global:
+    - export NODE_ENV=test
+
+script:
+  - npm test
+
+before_deploy:
+  - npm install
+  - npm -g install now
+  - now rm pluralsight-admin -y --token $PLURALSIGHT_ADMIN_TOKEN || true
+
+deploy:
+  provider: script
+  script: now --token $PLURALSIGHT_ADMIN_TOKEN --public
+  skip_cleanup: true
+  on:
+    branch: develop
+    master: true
+
+after_success:
+  - CODECLIMATE_REPO_TOKEN=$CODECLIMATE_REPO_TOKEN codeclimate-test-reporter < coverage/lcov.info
