@@ -1,0 +1,24 @@
+matrix:
+  include:
+    - language: node_js
+      node_js: 10
+      script:
+        - npm test
+  
+    - language: ruby
+      rvm: 2.5.3
+      addons:
+        chrome: stable
+      install:
+        - gem install bundler:2.0.1
+        - wget -N http://chromedriver.storage.googleapis.com/70.0.3538.16/chromedriver_linux64.zip -P ~/
+        - unzip ~/chromedriver_linux64.zip -d ~/
+        - rm ~/chromedriver_linux64.zip
+        - sudo mv -f ~/chromedriver /usr/local/share/
+        - sudo chmod +x /usr/local/share/chromedriver
+        - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+      before_script:
+        - bundle install
+      script:
+        - bundle exec rake test:unit
+        - bundle exec rake test:e2e

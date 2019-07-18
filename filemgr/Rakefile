@@ -1,0 +1,88 @@
+require "fileutils"
+require_relative "./lib/db"
+require_relative "./lib/env"
+
+task :default => "app:serve"
+
+namespace :app do
+  command = "bundle exec rerun 'bundle exec puma --port 3000'"
+  
+  desc "Generate build files for client"
+  task :build do
+    sh %{npm run build}
+  end
+
+  desc "Start puma server and watch changes"
+  task :serve => "app:build" do
+    sh %{export RACK_ENV=development && #{command}}
+  end
+
+  desc "Start puma server and watch changes"
+  task :prod => "app:build" do
+    sh %{export RACK_ENV=production && #{command}}
+  end
+end
+
+namespace :test do
+  desc "Run unit tests with rspec"
+  task :unit do
+    sh %{bundle exec rspec --exclude-pattern **/features/**/* server/spec}
+  end
+
+  desc "Run system tests with rspec"
+  task :e2e do
+    sh %{bundle exec rspec e2e}
+  end
+end
+
+namespace :db do
+  desc "Run all migrations"
+  task :migrate do
+    result = DB.migrate
+    message = "[*] Migrations executed successfully"
+    if result == true then puts message else puts "[!] #{result}" end
+  end
+
+  desc "Rollback all migrations"
+  task :rollback do
+    result = DB.rollback
+    message = "[*] Migrations rolled back successfully"
+    if result == true then puts message else puts "[!] #{result}" end
+  end
+
+  desc "Run all seeders"
+  task :seed do
+    result = DB.seed
+    message = "[*] Seeders executed successfully"
+    if result == true then puts message else puts "[!] #{result}" end
+  end
+
+  desc "Create database"
+  task :create do
+    result = DB.create
+    message = "[*] Database created successfully"
+    if result == true then puts message else puts "[!] #{result}" end
+  end
+
+  desc "Drop database"
+  task :drop do
+    result = DB.drop
+    message = "[*] Database dropped successfully"
+    if result == true then puts message else puts "[!] #{result}" end
+  end
+
+  desc "Setup database for environment"
+  task :setup do
+    puts "[*] Resetting database for envrionment => #{Env.raw}"
+    begin
+      Rake::Task['db:drop'].invoke  
+    rescue
+      puts '[!] Unable to drop database, another process might be connected to it'
+      exit
+    end
+    # These are never expected to raise exceptions
+    Rake::Task['db:create'].invoke
+    Rake::Task['db:migrate'].invoke
+    Rake::Task['db:seed'].invoke
+  end
+end
