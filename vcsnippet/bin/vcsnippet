@@ -1,0 +1,19 @@
+#!/bin/bash
+
+script_dir="$(dirname $0)"
+project_dir="$(dirname $script_dir)"
+ruby_script="$project_dir/lib/main.rb"
+
+function script_error {
+  echo
+  echo "[!] Library main script was not found"
+  echo "[!] Ensure vcsnippet library has been properly installed"
+  echo
+}
+
+if [ ! -f "$ruby_script" ]; then
+  script_error
+  exit
+fi
+
+ruby $ruby_script $*

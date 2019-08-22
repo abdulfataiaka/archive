@@ -1,0 +1,74 @@
+#!/bin/bash
+
+basedir="$(dirname $(dirname $0))"
+gemdir="$(pwd)"
+
+function run_script {
+  local script="$1"
+  echo "$(ruby $basedir/lib/$script.rb)"
+}
+
+function check_version_file_and_release_folder {
+  if [ ! -f "$gemdir/version" ]; then
+    echo "error: version file not present"
+    exit
+  fi
+
+  if [ ! -d "$gemdir/.release" ]; then
+    echo "error: folder .release not present"
+    exit
+  fi
+}
+
+function helptext {
+  echo "usage: gemtool [action?] [option?]" 
+  echo
+  echo "gemtool                  =>  print out this help content"
+  echo "gemtool init             =>  creates version file and .release folder"
+  echo "gemtool install          =>  build and install gem current version"
+  echo "gemtool deploy [option]  =>  deploy options: major|minor|patch|pre"
+  echo
+}
+
+function initialize_version_file {
+  if [ -f "$gemdir/version" ]; then
+    echo "ignored: version file exists already"
+  else
+    cp "$basedir/bin/version.default" "$gemdir/version"
+    echo "created: version file generated"
+  fi
+}
+
+function initialize_release_folder {
+  if [ -f "$gemdir/.release" ]; then
+    echo "error: file name clash with folder name .release"
+  elif [ -d "$gemdir/.release" ]; then
+    echo "ignored: folder .release exists already"
+  else
+    mkdir "$gemdir/.release"
+    echo "created: folder .release created"
+  fi
+}
+
+function initialize {
+  initialize_version_file
+  initialize_release_folder
+}
+
+function install_action {
+  if [ "$1" != "" ]; then
+    echo "error: install action takes no option"
+  else
+    echo "true"
+  fi
+}
+
+function deploy_action {
+  if [ "$1" == "" ]; then
+    echo "error: no option provided for deploy"
+  elif [[ ! "$1" =~ ^--(major|minor|patch|pre)$ ]]; then
+    echo "error: option for deploy action is invalid => $1"
+  else
+    echo "true"
+  fi
+}
