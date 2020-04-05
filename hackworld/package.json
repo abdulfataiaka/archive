@@ -1,0 +1,43 @@
+{
+  "name": "hackworld",
+  "version": "1.0.0",
+  "description": "A hack playground application",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install && npm run build && npm run serve",
+    "start": "npm run build && npm run serve",
+    "serve": "./node_modules/.bin/http-server public/",
+    "build:app": "./node_modules/.bin/webpack-cli",
+    "build:dist": "./node_modules/.bin/babel --ignore src/app --ignore src/views src --out-dir dist/",
+    "build:views": "node ./dist/lib/buildViews.js",
+    "build": "npm run build:dist && npm run build:app && npm run build:views",
+    "watch": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulfataiaka/hackworld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulfataiaka/hackworld/issues"
+  },
+  "homepage": "https://github.com/abdulfataiaka/hackworld#readme",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "gulp": "^4.0.2",
+    "nunjucks": "^3.2.0",
+    "gulp-exec": "^4.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}

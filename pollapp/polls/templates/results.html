@@ -1,0 +1,18 @@
+<h1>{{ question.question_text }}</h1>
+
+<h4>Votes for each choices</h4>
+
+{% with choices=question.choice_set.all %}
+
+{% if choices %}
+    <ul>
+    {% for choice in choices %}
+        <li>{{ choice.choice_text }} : {{ choice.votes }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    There are no choices yet for this question
+{% endif %}
+{% endwith %}
+<br>
+<a href="{% url 'detail' question.id %}">Go back to question view</a>

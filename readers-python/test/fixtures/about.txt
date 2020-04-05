@@ -1,0 +1,10 @@
+Hello there, this is a description about this project
+
+It is a simple module for managing files and spreadsheet, namely
+* Text Files
+* Csv Files
+* Tsv Files
+
+And
+* CsvSpreadsheet
+* TsvSpreadsheet

@@ -1,0 +1,29 @@
+<h1>{{ question.question_text }}</h1>
+
+{% if error_message %}<h4 style="color: darkred">{{ error_message }}</h4>{% endif %}
+
+{% with choices=question.choice_set.all %}
+
+{% if choices %}
+    <form method='post' action="{% url 'vote' question.id %}">
+        {% csrf_token %}
+        <ul>
+            <li>
+                <input type='radio' name='choice' value='0' checked>
+                <span>None Selected</span>
+            </li>
+            {% for choice in choices %}
+                <li>
+                    <input type='radio' name='choice' value='{{ choice.id }}' {% if default_choice_id and default_choice_id == choice.id %}checked{% endif %}>
+                    <span>{{ choice.choice_text }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="submit">Vote</button>
+        &nbsp;&nbsp;
+        <a href="{% url 'results' question.id %}">Check question results</a>
+    </form>
+{% else %}
+    There are no choices yet for this question
+{% endif %}
+{% endwith %}

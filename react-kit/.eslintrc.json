@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb"
+  ],
+
+  "rules": {
+    "comma-dangle": 0,
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true
+      }
+    ]
+  },
+
+  "parser": "babel-eslint",
+  
+  "globals": {
+    "describe": true,
+    "it": true,
+    "document": true
+  }
+}

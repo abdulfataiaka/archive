@@ -1,0 +1,14 @@
+# ignore system files
+.DS_Store
+.swp
+.vs_code
+
+# ignore node_modules
+node_modules/
+
+# ignore build folder
+/build/
+
+# ignore package-lock.json
+# unignored for collaboration
+/package-lock.json
