@@ -1,0 +1,71 @@
+.card-header__login:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-header__login {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid #e5e9f2;
+}
+.app-brand .brand-name {
+    color: #ffffff;
+    font-size: 1.12rem;
+    margin-left: 0.94rem;
+}
+.app-brand a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 75px;
+    line-height: 75px;
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    padding-left: 1.56rem;
+}
+.control {
+    display: block;
+    position: relative;
+    padding-left: 1.56rem;
+    color: #1b223c;
+    margin-bottom: 0.9375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+label {
+    text-transform: capitalize;
+}
+.control input {
+    position: absolute;
+    /* z-index: -1;
+    opacity: 0; */
+}
+.control-indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background: #e1e2e5;
+    border: 1px solid #ccc;
+    border-radius: 0.125rem;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+div>.card .p-35 {
+    padding: 35px !important;
+}
+.w-full {
+    width: 100%;
+}
+.align-center {
+    text-align: center;
+}
+.flex-row {
+    flex-direction: row;
+}
+.mh-90 {
+    min-height: 90px;
+}

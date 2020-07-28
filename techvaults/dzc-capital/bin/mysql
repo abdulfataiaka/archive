@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SCRIPTDIR="$(cd $(dirname $0) && pwd)"
+ROOTDIR="$(dirname $SCRIPTDIR)"
+
+cd $ROOTDIR
+
+mysql --host 127.0.0.1 --port 3306 --user=root --password=root  --database=dzc-capital-db

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wait4ports tcp://db:3306
+
+php artisan migrate
+php artisan db:seed

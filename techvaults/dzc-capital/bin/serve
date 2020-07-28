@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function setdb {
+    printf "\n[*] Setting up application database\n\n"
+    docker-compose down
+    docker-compose up -d db
+    docker-compose run --rm web bin/container/resetdb
+}
+
+function init {
+    printf "\n[*] Starting Initalization process\n\n"
+    php artisan config:clear
+    php artisan view:clear
+    php artisan route:clear
+    php artisan cache:clear
+}
+
+SCRIPTDIR="$(cd $(dirname $0) && pwd)"
+ROOTDIR="$(dirname $SCRIPTDIR)"
+
+cd $ROOTDIR;
+
+if [ "$1" == "--db" ] || [ "$2" == "--db" ]; then setdb; fi
+if [ "$1" == "--init" ] || [ "$2" == "--init" ]; then init; fi
+
+printf "\n[*] Starting laravel development server\n\n"
+php artisan serve

@@ -1,0 +1,61 @@
+#!/bin/bash
+
+function init-client {
+    printf "\n[*] Building client assets\n\n"
+    bin/yarn build
+}
+
+function init-app {
+    printf "\n[*] Setting up test database\n\n"
+    docker-compose down
+    docker-compose up -d db
+    docker-compose run --rm web bin/container/testdb
+}
+
+SCRIPTDIR="$(cd $(dirname $0) && pwd)"
+ROOTDIR="$(dirname $SCRIPTDIR)"
+
+cd $ROOTDIR
+
+if [ "$1" == "all" ]; then
+    bin/test app
+    bin/test client
+
+elif [ "$1" == "app" ]; then
+    args=${*:2}
+
+    if [ "$2" == "--init" ]; then
+        init-app
+        args=${*:3}
+    fi
+
+    vendor/bin/phpunit $args
+
+elif [ "$1" == "client" ]; then
+    args=${*:2}
+
+    if [ "$2" == "--init" ]; then
+        init-client
+        args=${*:3}
+    fi
+
+    printf "\n[*] Running client tests\n\n"
+
+elif [ "$1" == "lib" ]; then
+    dir="lib/$2/Tests"
+
+    if [ ! -d $dir ]; then
+        printf "\n[*] Invalid lib directory name : $2\n\n"
+    else
+        vendor/bin/phpunit $dir
+    fi
+
+else
+    printf "\nNo tests specified for execution\n"
+    printf "\n[usage]: test [command] [--init] [arguments]\n"
+    printf "\nAvailable Commands\n"
+    printf "   * all\n"
+    printf "   * app\n"
+    printf "   * lib\n"
+    printf "   * client\n\n"
+fi
